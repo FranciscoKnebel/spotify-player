@@ -4,11 +4,12 @@
   "description": "A player using spotify-wrapper-api.",
   "main": "index.js",
   "scripts": {
-    "lint": "./node_modules/.bin/eslint src/*.js",
+    "lint": "./node_modules/.bin/eslint src/*.js tests/**/*.spec.js",
+    "lint-fix": "./node_modules/.bin/eslint src/*.js tests/**/*.spec.js --fix",
     "prepush": "npm run lint",
     "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
     "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
-    "test:coverage": "nyc npm test",
+    "test:coverage": "./node_modules/.bin/nyc npm test",
     "start": "./node_modules/.bin/webpack-dev-server"
   },
   "nyc": {
@@ -45,11 +46,17 @@
     "eslint-config-airbnb": "^12.0.0",
     "eslint-plugin-import": "^2.0.1",
     "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-mocha": "^4.11.0",
     "eslint-plugin-react": "^6.4.1",
     "husky": "^0.11.9",
+    "jsdom": "^11.1.0",
+    "jsdom-global": "^3.0.2",
     "mocha": "^3.2.0",
     "nyc": "^10.2.0",
     "webpack": "^2.6.1",
     "webpack-dev-server": "^2.4.5"
+  },
+  "dependencies": {
+    "spotify-wrapper-api": "^1.0.2"
   }
 }
