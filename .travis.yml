@@ -1,0 +1,23 @@
+language: node_js
+node_js:
+- '8'
+
+cache:
+  directories: node_modules
+  
+before_script:
+- npm run build:all
+
+after_success:
+- npm run test:coveralls
+
+deploy:
+  provider: releases
+  api_key:
+    secure: CPxzXyUz1ffkh/7S2wHePW+8dMe5Ige9LWYdhVZXSDSK3wQSpN4fpKeRMepsBpjppUnB4UPoLZ7+adcuve/XDn4AHwTfZq8k8LMDJBklhVbmoGdzsdiUferw0TFPwdqKUBSpirFf6MjJ94G/Ea9Q+fcHAd2INsMiZKtuOJep+K4NwwNMYHbJzDWfkUwZfDxRRge9XSyIPQKUP4T02ULw06K2AHvgZan8PHUs5fJcmqoaL38zzxjXqKj/fPrIAi7Mhr+oRU9IOxuokHzSasfoReU/yCixcv52mHaZojQjethC6Ij1l2cn5jF7/DXcR9VPhTAlUiTMwQWg5RybgQYBPBfh8Oyejy87gHSVByITslB7PefTt33NRDHL29uKFpkgpnErVxQgv/voA+4ojsOHrd4BEm2DYYuycgaLz8sL4BZoCO09bcu9DiKqtd1NScITuA4ZCNk/VQ1epnq7FLhF2my/gxvvtLtf9BZJZDXafK2udAuC2Kn6i5rXATiDSb8qAxy4CaPzrjvIWIHGcH53ABsrKM4WSaX34PqogVlVUkLkli9K/EWnAx2c8UppdohJSgv+nCAVapfx09c8utkiZuZeKipC6Wh4/C6kMEZ3inH/iCOpavCashHMrRdEQnfw5l2/cuZMFCNreNVxh/buvgwu2R+iIvJ3AFgB2CnXqdw=
+  file_glob: true
+  file: dist/*
+  skip_cleanup: true
+  on:
+    tags: true
+    repo: FranciscoKnebel/spotify-wrapper-api

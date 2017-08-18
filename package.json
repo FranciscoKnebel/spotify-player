@@ -1,0 +1,55 @@
+{
+  "name": "spotify-player",
+  "version": "1.0.0",
+  "description": "A player using spotify-wrapper-api.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "./node_modules/.bin/eslint src/*.js",
+    "prepush": "npm run lint",
+    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:coverage": "nyc npm test",
+    "start": "./node_modules/.bin/webpack-dev-server"
+  },
+  "nyc": {
+    "reporter": [
+      "text",
+      "html"
+    ],
+    "exclude": [
+      "tests/**"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FranciscoKnebel/spotify-player.git"
+  },
+  "keywords": [
+    "js",
+    "tdd",
+    "library",
+    "spotify-wrapper-api"
+  ],
+  "author": "Francisco Knebel <franciscopaivaknebel@gmail.com> (https://github.com/FranciscoKnebel)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FranciscoKnebel/spotify-player/issues"
+  },
+  "homepage": "https://github.com/FranciscoKnebel/spotify-player#readme",
+  "devDependencies": {
+    "babel-loader": "^7.0.0",
+    "babel-preset-env": "^1.3.2",
+    "babel-register": "^6.24.0",
+    "chai": "^3.5.0",
+    "eslint": "^3.7.1",
+    "eslint-config-airbnb": "^12.0.0",
+    "eslint-plugin-import": "^2.0.1",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.4.1",
+    "husky": "^0.11.9",
+    "mocha": "^3.2.0",
+    "nyc": "^10.2.0",
+    "webpack": "^2.6.1",
+    "webpack-dev-server": "^2.4.5"
+  }
+}
