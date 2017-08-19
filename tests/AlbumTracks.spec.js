@@ -3,6 +3,7 @@ import chai, { expect } from 'chai';
 import chaiHtml from 'chai-html';
 
 import renderAlbumTracks from '../src/AlbumTracks';
+import convertMS from '../src/convertMS';
 
 chai.use(chaiHtml);
 
@@ -30,7 +31,7 @@ describe('AlbumTracks', () => {
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
       `;
 
@@ -45,12 +46,12 @@ describe('AlbumTracks', () => {
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
       `;
 
@@ -65,47 +66,47 @@ describe('AlbumTracks', () => {
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
         <div class="music" data-track-preview="${data.preview_url}">
           <p class="number">${data.track_number}</p>
           <p class="title">${data.name}</p>
-          <p class="duration">${data.duration_ms}</p>
+          <p class="duration">${convertMS(data.duration_ms)}</p>
         </div>
       `;
 
