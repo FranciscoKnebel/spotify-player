@@ -1,5 +1,5 @@
-import spotify from './Spotify';
-import renderAlbums from './AlbumList';
+import spotify from '../Spotify';
+import renderAlbums from '../AlbumList';
 
 const searchInput = document.getElementById('search-input');
 const searchForm = document.getElementById('search-form');
