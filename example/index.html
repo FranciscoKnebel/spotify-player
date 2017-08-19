@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Spotify Player</title>
-		
+
 		<link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 		<link href="normalize.css" rel="stylesheet">
 		<link href="theme.css" rel="stylesheet">
@@ -20,7 +20,7 @@
 					</svg>
 				  </a>
 				</header>
-				
+
 				<form class="form-wrapper">
 					<input class="form-input" type="text" name="query" placeholder="Type an artist/album" autocomplete="off">
 					<svg class="form-icon" viewBox="0 0 27 28" xmlns="http://www.w3.org/2000/svg">
@@ -29,98 +29,17 @@
 					</svg>
 				</form>
 			<div>
-			
-			<div class="list">
-				<div class="list-item">
-				  <img src="https://i.scdn.co/image/a13aadb368a956be48fe9089acb64333f0c0ca40" alt="" class="list-image">
-				  <div class="list-description">
-					<p class="list-title">Make Yourself</p>
-					<p class="list-subtitle">Incubus</p>
-				  </div>
-				</div>
 
-				<div class="list-item">
-				  <img src="https://i.scdn.co/image/9a464b23594697b5a339ce3150a6656e1829d447" alt="" class="list-image">
-				  <div class="list-description">
-					<p class="list-title">8</p>
-					<p class="list-subtitle">Incubus</p>
-				  </div>
-				</div>
-
-				<div class="list-item">
-				  <img src="https://i.scdn.co/image/a13aadb368a956be48fe9089acb64333f0c0ca40" alt="" class="list-image">
-				  <div class="list-description">
-					<p class="list-title">Make Yourself</p>
-					<p class="list-subtitle">Incubus</p>
-				  </div>
-				</div>
-
-				<div class="list-item">
-				  <img src="https://i.scdn.co/image/9a464b23594697b5a339ce3150a6656e1829d447" alt="" class="list-image">
-				  <div class="list-description">
-					<p class="list-title">8</p>
-					<p class="list-subtitle">Incubus</p>
-				  </div>
-				</div>
-
-				<div class="list-item">
-				  <img src="https://i.scdn.co/image/a13aadb368a956be48fe9089acb64333f0c0ca40" alt="" class="list-image">
-				  <div class="list-description">
-					<p class="list-title">Make Yourself</p>
-					<p class="list-subtitle">Incubus</p>
-				  </div>
-				</div>
-
-				<div class="list-item">
-				  <img class="list-image" src="https://i.scdn.co/image/9a464b23594697b5a339ce3150a6656e1829d447" alt="">
-				  <div class="list-description">
-					<p class="list-title">8</p>
-					<p class="list-subtitle">Incubus</p>
-				  </div>
-				</div>
-			</div>
+			<div class="list" id="album-list"></div>
 		</aside>
-		
+
 		<main class="container">
-		  <div class="inner">
-			<div class="album info">
-			  <img class="image" src="https://i.scdn.co/image/a13aadb368a956be48fe9089acb64333f0c0ca40" alt="">
-			  <p class="title">Make Yourself</p>
-			  <p class="artist">Incubus</p>
-			  <p class="counter">13 Músicas</p>
-			</div>
-
-			<div class="album musics">
-			  <div class="music active">
-				<p class="number">1</p>
-				<p class="title">Privilege</p>
-				<p class="duration">3:54</p>
-			  </div>
-
-			  <div class="music">
-				<p class="number">2</p>
-				<p class="title">Nowhere Fast</p>
-				<p class="duration">4:30</p>
-			  </div>
-			  
-			  <div class="music">
-				<p class="number">3</p>
-				<p class="title">Nowhere Fast</p>
-				<p class="duration">4:30</p>
-			  </div>
-			  
-			  <div class="music">
-				<p class="number">4</p>
-				<p class="title">Nowhere Fast</p>
-				<p class="duration">4:30</p>
-			  </div>
-			  
-
-			</div>
+	  	<div class="inner">
+				<div class="album info" id="album-info"></div>
+				<div class="album musics" id="album-tracks"></div>
 		  </div>
 		</main>
 
-
-		<script src="bundle.js"></script>		
-	</body>	
+		<script src="bundle.js"></script>
+	</body>
 </html>
